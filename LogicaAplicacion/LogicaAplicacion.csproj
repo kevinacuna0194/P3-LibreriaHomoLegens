@@ -10,5 +10,10 @@
     <Folder Include="CasosUso\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CasosUso\CasosUso.csproj" />
+    <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj" />
+  </ItemGroup>
+
 </Project>
  

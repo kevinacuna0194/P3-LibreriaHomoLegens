@@ -7,10 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="EntidadesDominio\" />
     <Folder Include="InterfacesRepositorios\" />
-    <Folder Include="InterfacesDominio\" />
     <Folder Include="ValueObjects\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ExcepcionesPropias\ExcepcionesPropias.csproj" />
   </ItemGroup>
 
 </Project>

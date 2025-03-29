@@ -6,12 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositorios\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj" />
-  </ItemGroup>
-
 </Project>
