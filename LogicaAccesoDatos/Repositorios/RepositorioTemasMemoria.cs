@@ -13,9 +13,9 @@ namespace LogicaAccesoDatos.Repositorios
 {
     public class RepositorioTemasMemoria : IRepositorioTemas
     {
-        private static List<Tema> temas = new List<Tema>();
+        private static List<Tema> temas = new List<Tema>() { new Tema { Id = 1, Nombre = 'Nombre de Prueba' } };
 
-        private static int ultimoId = 0;
+        private static int ultimoId = 2;
 
         public void Add(Tema tema)
         {

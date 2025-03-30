@@ -1,7 +1,16 @@
+using CasosUso.InterfacesCasosUso;
+using LogicaAccesoDatos.Repositorios;
+using LogicaAplicacion.CasosUsoConcretos;
+using LogicaNegocio.InterfacesRepositorios;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IAltaTema, AltaTema>();
+builder.Services.AddScoped<IListadoTemas, ListadoTemas>();
+builder.Services.AddScoped<IRepositorioTemas, RepositorioTemasMemoria>();
 
 var app = builder.Build();
 
@@ -22,6 +31,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Temas}/{action=Index}/{id?}");
 
 app.Run();
