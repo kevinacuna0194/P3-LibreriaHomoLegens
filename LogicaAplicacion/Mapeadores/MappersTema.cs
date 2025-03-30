@@ -10,6 +10,7 @@ namespace LogicaAplicacion.Mapeadores
 {
     public class MappersTema
     {
+        // Método auxiliar. Convierte un TemaDTO en un Tema
         public static Tema ToTema(TemaDTO dto)
         {
             Tema tema = new Tema()
@@ -21,7 +22,8 @@ namespace LogicaAplicacion.Mapeadores
             return tema;
         }
 
-        TemaDTO ToTemaDTO(Tema tema)
+        // Método auxiliar. Convierte un Tema en un TemaDTO
+        public static TemaDTO ToTemaDTO(Tema tema)
         {
             TemaDTO dto = new TemaDTO()
             {
@@ -30,6 +32,21 @@ namespace LogicaAplicacion.Mapeadores
             };
 
             return dto;
+        }
+
+        // Método auxiliar. Convierte una lista de Temas en una lista de TemaDTOs
+        public static List<TemaDTO> ToListaTemaDTO(List<Tema> temas)
+        {
+            List<TemaDTO> temasDTO = new List<TemaDTO>();
+
+            foreach (Tema tema in temas)
+            {
+                TemaDTO dto = ToTemaDTO(tema);
+
+                temasDTO.Add(dto);
+            }
+
+            return temasDTO;
         }
     }
 }
