@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LogicaNegocio.EntidadesDominio
 {
-    internal class Tema : IValidable
+    public class Tema : IValidable
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
