@@ -13,6 +13,17 @@ namespace LogicaNegocio.EntidadesDominio
         public int Id { get; set; }
         public string Nombre { get; set; }
 
+        public Tema() 
+        {
+
+        }
+
+        public Tema(string nombre)
+        {
+            Nombre = nombre;
+            Validar();
+        }
+
         public void Validar()
         {
             if (string.IsNullOrEmpty(this.Nombre))
